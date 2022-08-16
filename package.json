@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "build": "netlify-lambda build express"
+    "build": "netlify-lambda build index.js"
   },
   "author": "P1GAS",
   "license": "ISC",
