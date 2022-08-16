@@ -9,9 +9,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
-const authRoute = require("./routes/auth");
-const tokenRoute = require("./routes/token");
-const userRoute = require("./routes/user");
+const authRoute = require("../routes/auth");
+const tokenRoute = require("../routes/token");
+const userRoute = require("../routes/user");
 
 const app = express();
 

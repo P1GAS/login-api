@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "build": "netlify-lambda build index.js"
+    "start": "nodemon index/index",
+    "build": "netlify-lambda build index"
   },
   "author": "P1GAS",
   "license": "ISC",
