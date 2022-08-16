@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
+const serverless = require("serverless-http");
 const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
@@ -45,6 +46,11 @@ app.use("/api/auth", authRoute);
 app.use("/api/tokens", tokenRoute);
 app.use("/api/users", userRoute);
 
-app.listen(process.env.PORT, (err) => {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.handler = serverless(app)
+} else {
+  app.listen(process.env.PORT, (err) => {
   console.log("app is running with " + err);
-});
+  });
+}
